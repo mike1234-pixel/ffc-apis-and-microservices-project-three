@@ -2,6 +2,8 @@
 
 # URL Shortener Microservice
 
+[![url-shortener-screenshot](https://user-images.githubusercontent.com/57681651/99067378-83237200-25a2-11eb-9cc3-87d176080684.JPG)](https://url-shortener-111.herokuapp.com/)
+
 ## User Stories
 
 - I can POST a URL to `[project_url]/api/shorturl/new` and I will receive a shortened URL in the JSON response. Example : `{"original_url":"www.google.com","short_url":1}`
@@ -23,3 +25,5 @@ https://www.freecodecamp.org/forum/
 ## Packages
 
 The project is written in _Node.js_ with _express_, _mongoose_ and _mongodb_. It uses the _dns_ module to check the validity of urls.
+
+[See the app!](https://url-shortener-111.herokuapp.com/)
