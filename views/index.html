@@ -4,9 +4,15 @@
 
    <head>
       <title>URL Shortener</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
       <link href="/public/style.css" rel="stylesheet" type="text/css">
+      <!-- Google Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+      <!-- Local CSS -->
+      <link rel="stylesheet" type="text/css" href='./public/style.css'>
    </head>
 
    <body>
@@ -25,9 +31,11 @@
           example: <code>POST [project_url]/api/shorturl/new</code> - <code>https://www.google.com</code>
         </p>
         <form action="api/shorturl/new" method="POST">
-          <label for="url_input">URL to be shortened</label>
-          <input id="url_input" type="text" name="url" value="https://www.freecodecamp.org">
-          <input type="submit" value="POST URL">
+          <div class="md-form">
+            <input type='text' id='url_input' name='url' class="form-control text-dark" required=''>
+            <label class="text-dark" for='url_input'>Enter a URL (e.g. https://www.freecodecamp.org)</label>
+          </div>
+          <input type="submit" class="btn btn-success" value="POST URL">
         </form>
         <h3>Example Usage:</h3>
         <a href="https://url-shortener.freecodecamp.repl.co/api/shorturl/3">
@@ -38,10 +46,16 @@
         <p>https://forum.freecodecamp.org/</p>
       </div>
       <div class="footer">
-        <p>
-          by <a href="https://www.freecodecamp.org">freeCodeCamp</a>
-        </p>
+
       </div>
+      <!-- JQuery -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
    </body>
 
 

@@ -1,10 +1,11 @@
-'use strict';
+// 'use strict';
 
 var express = require('express');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var dns = require('dns');
+var dotenv = require('dotenv').config({ path: './.env' });
 
 var cors = require('cors');
 
@@ -102,12 +103,3 @@ app.get("/api/shorturl/:route", (req, res) => {
 app.listen(port, function () {
   console.log('Node.js listening ...');
 });
-
-// for post ...
-// WILL NEED TO STORE SHORT URLS AND CORRESPONDING LONG URLS IN A DATABASE FOR EVERY ENTRY SUBMITTED
-// READ THE LAST ENTRY IN THE DB, THE NEXT SHORTURL WILL BE THE LAST SHORTURL + 1, SAVE THE SHORTURL AND CORRESPONDING LONGURL TO THE DB.
-// for get ... 
-// ON A ROUTE PARAM /:ROUTE, READ THE PARAM, FETCH THE DATA FROM THE DB, READ THE SHORTURL, AND RES.REDIRECT TO THE CORRESPONDING LONG URL IN THE DOC
-// save documents as...
-// {"original_url": "https://www.freecodecamp.org", "short_url": "1"}
-// RETURN THE OBJECT CONTAINING ORIGINAL AND SHORT URL TO THE USER AFTER A POST REQUEST
